@@ -1,0 +1,22 @@
+[0;1;32m●[0m mariadb.service - MariaDB 10.3.25 database server
+     Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2021-03-13 17:05:50 UTC; 11s ago
+       Docs: man:mysqld(8)
+             https://mariadb.com/kb/en/library/systemd/
+   Main PID: 15600 (mysqld)
+     Status: "Taking your SQL requests now..."
+      Tasks: 31 (limit: 19176)
+     Memory: 67.6M
+     CGroup: /system.slice/mariadb.service
+             └─15600 /usr/sbin/mysqld
+
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mProcessing databases[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185minformation_schema[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mmysql[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mperformance_schema[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mPhase 6/7: Checking and upgrading tables[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mProcessing databases[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185minformation_schema[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mperformance_schema[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mPhase 7/7: Running 'FLUSH PRIVILEGES'[0m
+Mar 13 17:05:50 ip-184-168-123-245.ip.secureserver.net /etc/mysql/debian-start[15638]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mOK[0m
