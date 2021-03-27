@@ -63,5 +63,11 @@ return [
 
     'tron' => [
         'network' => env('PAYMENTS_TRON_NETWORK', 'api.trongrid.io'),
+    ],
+    'zf77777' => [
+        'user_id'               => env('PAYMENTS_ZF77777_USER_ID'),
+        'notifyurl'             => env('PAYMENTS_ZF77777_NOTIFY_URL'),
+        'returnurl'             => env('PAYMENTS_ZF77777_RETURN_URL'),
+        'sign'                  => env('PAYMENTS_ZF77777_SIGN'),
     ]
 ];

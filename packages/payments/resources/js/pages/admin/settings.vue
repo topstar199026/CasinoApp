@@ -337,6 +337,51 @@
             />
           </v-expansion-panel-content>
         </v-expansion-panel>
+        <v-expansion-panel>
+          <v-expansion-panel-header>{{ $t('Zf77777') }}</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <v-text-field
+              v-model="form.PAYMENTS_ZF777777_USER"
+              :label="$t('API userid')"
+              :error="form.errors.has('PAYMENTS_ZF777777_USER')"
+              :error-messages="form.errors.get('PAYMENTS_ZF777777_USER')"
+              outlined
+              :hint="$t('Please note, it is different from your regular zf77777 account userid')"
+              persistent-hint
+              @keydown="clearFormErrors($event,'PAYMENTS_ZF777777_USER')"
+            />
+            <v-text-field
+              v-model="form.PAYMENTS_ZF77777_NOTIFY_URL"
+              :label="$t('API Notify url')"
+              :error="form.errors.has('PAYMENTS_ZF77777_NOTIFY_URL')"
+              :error-messages="form.errors.get('PAYMENTS_ZF77777_NOTIFY_URL')"
+              outlined
+              :hint="$t('Please note, it is different from your regular zf77777 notify url')"
+              persistent-hint
+              @keydown="clearFormErrors($event,'PAYMENTS_ZF77777_NOTIFY_URL')"
+            />
+            <v-text-field
+              v-model="form.PAYMENTS_ZF77777_RETURN_URL"
+              :label="$t('API return url')"
+              :error="form.errors.has('PAYMENTS_ZF77777_RETURN_URL')"
+              :error-messages="form.errors.get('PAYMENTS_ZF77777_RETURN_URL')"
+              outlined
+              :hint="$t('Please note, it is different from your regular zf77777 return url')"
+              persistent-hint
+              @keydown="clearFormErrors($event,'PAYMENTS_ZF77777_RETURN_URL')"
+            />
+            <v-text-field
+              v-model="form.PAYMENTS_ZF77777_SIGN"
+              :label="$t('API sign')"
+              :error="form.errors.has('PAYMENTS_ZF77777_SIGN')"
+              :error-messages="form.errors.get('PAYMENTS_ZF77777_SIGN')"
+              outlined
+              :hint="$t('Please note, it is different from your regular zf77777 account sign')"
+              persistent-hint
+              @keydown="clearFormErrors($event,'PAYMENTS_ZF77777_SIGN')"
+            />
+          </v-expansion-panel-content>
+        </v-expansion-panel>
       </v-expansion-panels>
     </v-card-text>
   </v-card>
@@ -386,7 +431,11 @@ export default {
         PAYMENTS_NOTIFICATIONS_ADMIN_DEPOSIT_ENABLED: '' + config('payments.notifications.admin.deposit.enabled'),
         PAYMENTS_NOTIFICATIONS_ADMIN_DEPOSIT_TRESHOLD: parseInt(config('payments.notifications.admin.deposit.treshold'), 10),
         PAYMENTS_NOTIFICATIONS_ADMIN_WITHDRAWAL_ENABLED: '' + config('payments.notifications.admin.withdrawal.enabled'),
-        PAYMENTS_NOTIFICATIONS_ADMIN_WITHDRAWAL_TRESHOLD: parseInt(config('payments.notifications.admin.withdrawal.treshold'), 10)
+        PAYMENTS_NOTIFICATIONS_ADMIN_WITHDRAWAL_TRESHOLD: parseInt(config('payments.notifications.admin.withdrawal.treshold'), 10),
+        PAYMENTS_ZF777777_USER: config('payments.zf77777.user_id'),
+        PAYMENTS_ZF77777_NOTIFY_URL: config('payments.zf77777.notifyurl'),
+        PAYMENTS_ZF77777_RETURN_URL: config('payments.zf77777.returnurl'),
+        PAYMENTS_ZF77777_SIGN: config('payments.zf77777.sign'),
       }
     }
   },
