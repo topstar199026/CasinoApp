@@ -15,13 +15,13 @@ class PaymentGatewayController extends Controller
             ? PaymentGatewayMethod::TYPE_IN
             : PaymentGatewayMethod::TYPE_OUT;
 
-        return PaymentGateway::with(['paymentMethodsaaa' => function($query) use($type) {
+        return PaymentGateway::with(['paymentMethods' => function($query) use($type) {
                 $query->whereIn('type', [$type, PaymentGatewayMethod::TYPE_BOTH]);
             }])
             ->whereHas('paymentMethods', function($query) use($type) {
                 $query->whereIn('type', [$type, PaymentGatewayMethod::TYPE_BOTH]);
             })
-            ->orderBy('id')
+            ->orderBy('ids')
             ->get()
             ->map(function ($gateway) {
                 if ($gateway->paymentMethods) {
