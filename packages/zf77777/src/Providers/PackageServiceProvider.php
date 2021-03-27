@@ -2,7 +2,7 @@
 
 namespace Packages\Zf77777\Providers;
 
-use Illuminate\Console\Scheduling\Schedule;
+// use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\ServiceProvider;
 // use Packages\Zf77777\Console\Commands\CompleteDeposits;
 // use Packages\Zf77777\Console\Commands\SendWithdrawals;
@@ -23,7 +23,7 @@ class PackageServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom($packageBaseDir . 'routes/api.php');
 
         // register commands and schedules
-        if ($this->app->runningInConsole()) {
+        // if ($this->app->runningInConsole()) {
             // $this->commands([
             //     CompleteDeposits::class,
             //     SendWithdrawals::class
@@ -34,7 +34,7 @@ class PackageServiceProvider extends ServiceProvider
             //     $schedule->command('deposits:complete')->everyMinute();
             //     $schedule->command('withdrawals:send')->everyFiveMinutes();
             // });
-        }
+        // }
     }
 
     /**
