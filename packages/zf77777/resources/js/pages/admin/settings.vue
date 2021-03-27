@@ -3,11 +3,18 @@
     <v-card-text>
       <v-expansion-panels>
         <v-expansion-panel>
-          <v-expansion-panel-header>{{ $t('77777GateWay') }}</v-expansion-panel-header>
+          <v-expansion-panel-header>{{ $t('Zf77777') }}</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-btn icon v-on="on">
-              <v-icon :small="small">mdi-dots-vertical</v-icon>
-            </v-btn>
+            <v-text-field
+              v-model="form.PAYMENTS_ZF777777_USER"
+              :label="$t('API userid')"
+              :error="form.errors.has('PAYMENTS_ZF777777_USER')"
+              :error-messages="form.errors.get('PAYMENTS_ZF777777_USER')"
+              outlined
+              :hint="$t('Please note, it is different from your regular zf77777 account userid')"
+              persistent-hint
+              @keydown="clearFormErrors($event,'PAYMENTS_ZF777777_USER')"
+            />
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-expansion-panels>
@@ -30,7 +37,11 @@ export default {
 
   data () {
     return {
-      variables: {        
+      variables: {   
+        PAYMENTS_ZF777777_USER: config('user_id'),
+        PAYMENTS_ZF77777_NOTIFY_URL: config('notifyurl'),
+        PAYMENTS_ZF77777_RETURN_URL: config('returnurl'),
+        PAYMENTS_ZF77777_SIGN: config('sign'),
       }
     }
   },
