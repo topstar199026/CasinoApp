@@ -26,7 +26,7 @@ class PaymentGatewayController extends Controller
             ->map(function ($gateway) {
                 if ($gateway->paymentMethods) {
                     foreach ($gateway->paymentMethods as $method) {
-                        $method->makeVisible(['parameters', 'allowed_currencies']);
+                        $method->makeVisible(['parametersA', 'allowed_currencies']);
                     }
                 }
                 return $gateway;
