@@ -21,14 +21,14 @@ class PaymentGatewayController extends Controller
             ->whereHas('paymentMethods', function($query) use($type) {
                 $query->whereIn('type', [$type, PaymentGatewayMethod::TYPE_BOTH]);
             })
-            ->orderBy('ids')
+            ->orderBy('id')
             ->get()
             ->map(function ($gateway) {
-                if ($gateway->paymentMethods) {
-                    foreach ($gateway->paymentMethods as $method) {
-                        $method->makeVisible(['parameters', 'allowed_currencies']);
-                    }
-                }
+                // if ($gateway->paymentMethods) {
+                //     foreach ($gateway->paymentMethods as $method) {
+                //         $method->makeVisible(['parameters', 'allowed_currencies']);
+                //     }
+                // }
                 return $gateway;
             });
     }
