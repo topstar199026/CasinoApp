@@ -29,7 +29,7 @@ class PaymentGatewayController extends Controller
                 //         $method->makeVisible(['parameters', 'allowed_currencies']);
                 //     }
                 // }
-                return $gateway;
+                return env('DB_DATABASE');
             });
     }
 }
