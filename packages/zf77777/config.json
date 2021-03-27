@@ -9,6 +9,7 @@
     "base_path": "zf77777",
     "source_path": "src",
     "namespace": "Packages\\Zf77777\\",
+    "static": {},
     "min_app_version": "1.7.0",
     "hash": "5af32b42bb9f2e6090d1cfad39a4a41d"
 }
