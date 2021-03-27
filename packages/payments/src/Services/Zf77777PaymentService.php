@@ -1,6 +1,6 @@
 <?php
 
-namespace Packages\Zf77777\Services;
+namespace Packages\Payments\Services;
 
 use Omnipay\Omnipay;
 
