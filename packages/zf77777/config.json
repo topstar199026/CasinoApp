@@ -1,0 +1,14 @@
+{
+    "id": "zf77777",
+    "name": "Zf77777",
+    "type": "add-on",
+    "description": "This add-on enables deposits and withdrawals for zf77777.",
+    "providers": [
+        "Packages\\Zf77777\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "zf77777",
+    "source_path": "src",
+    "namespace": "Packages\\Zf77777\\",
+    "min_app_version": "1.7.0",
+    "hash": "5af32b42bb9f2e6090d1cfad39a4a41d"
+}
