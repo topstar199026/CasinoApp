@@ -24,12 +24,12 @@ class PaymentGatewayController extends Controller
             ->orderBy('id')
             ->get()
             ->map(function ($gateway) {
-                // if ($gateway->paymentMethods) {
-                //     foreach ($gateway->paymentMethods as $method) {
-                //         $method->makeVisible(['parameters', 'allowed_currencies']);
-                //     }
-                // }
-                return env('DB_DATABASE');
+                if ($gateway->paymentMethods) {
+                    foreach ($gateway->paymentMethods as $method) {
+                        $method->makeVisible(['parameters', 'allowed_currencies']);
+                    }
+                }
+                return $gateway;
             });
     }
 }
