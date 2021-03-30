@@ -10,13 +10,13 @@ class Zf77777PaymentService extends PaymentService
 
     protected function init()
     {
-        $this->omnipay = Omnipay::create('PayPal_Express');
+        $this->omnipay = Omnipay::create('Zf77777');
 
         $this->omnipay->initialize([
-            'username'  => config('payments.paypal.user'),
-            'password'  => config('payments.paypal.password'),
-            'signature' => config('payments.paypal.signature'),
-            'testMode'  => config('payments.paypal.test_mode'),
+            'user_id'  => config('payments.zf77777.user_id'),
+            'notifyurl'  => config('payments.zf77777.notifyurl'),
+            'returnurl' => config('payments.zf77777.returnurl'),
+            'sign'  => config('payments.zf77777.sign'),
         ]);
     }
 
